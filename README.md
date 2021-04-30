@@ -2,6 +2,11 @@
 
 A simple application and UI that allows users to browse and filter through images of Robots (an array of data fetched from an API).
 
+## Deploy:
+https://tpadilla10117.github.io/robo_search/
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
