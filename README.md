@@ -1,6 +1,6 @@
 # Description:
 
-A simple application and UI that allows users to browse and filter through an array of data fetched from an API.
+A simple application and UI that allows users to browse and filter through images of Robots (an array of data fetched from an API).
 
 # Getting Started with Create React App
 
