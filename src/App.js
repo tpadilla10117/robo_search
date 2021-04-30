@@ -43,9 +43,8 @@ class App extends Component {
     const filteredPeople = people.filter(people => people.name.toLowerCase().includes(searchField.toLowerCase()) )
 
     return (<div className="App">
-      {/*  */}
+      <h1>Robots Rolodex</h1>
       <SearchBox placeholder="search robots" handleChange={this.handleChange} />
-
       <CardList people={filteredPeople}/>
      
       <header className="App-header">
