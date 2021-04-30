@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { CardList } from './components/card-list/card-list';
+import { SearchBox } from './components/search-box/searchbox.js';
 import './App.css';
 
 class App extends Component {
@@ -17,6 +18,9 @@ class App extends Component {
       ],
       searchField: ''
     };
+
+    /* Context of 'this' here is explicitly stated: */
+    /* this.handleChange = this.handleChange.bind(this); */
   }
 
   /* 1) fetch() lets us make an API request to the URL */
@@ -28,6 +32,11 @@ class App extends Component {
     .then(users =>  this.setState({ people: users}));
   }
 
+  /* arrow function lets us bind this (lexical scoping) */
+  handleChange = (element) => {
+    this.setState({ searchField: element.target.value})
+  }
+
   render() {
     const { people, searchField } = this.state;
 
@@ -35,7 +44,8 @@ class App extends Component {
 
     return (<div className="App">
       {/*  */}
-      <input type='search' placeholder="Search Robots" onChange={ element =>  this.setState({ searchField: element.target.value})} />
+      <SearchBox placeholder="search robots" handleChange={this.handleChange} />
+
       <CardList people={filteredPeople}/>
      
       <header className="App-header">
