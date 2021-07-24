@@ -34,7 +34,9 @@ class App extends Component {
     return (<div className="App">
       <h1>Robo Search</h1>
       <SearchBox placeholder="search robots" handleChange={this.handleChange} />
-      <CardList people={filteredPeople}/>
+      <div className="list_container">
+        <CardList people={filteredPeople}/>
+      </div>
     </div>
     );
   }
